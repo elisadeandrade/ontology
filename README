@@ -1,0 +1,20 @@
+###README
+This repository contains code for analyzing and visualizing codon usage data. The code utilizes various libraries such as pandas, numpy, matplotlib, ipywidgets, rdflib, and SPARQLWrapper. The following sections provide an overview of the code and its functionalities.
+
+##Preparing Datasets
+The code starts by importing the necessary libraries and setting up the endpoint for SPARQL querying. It also sets the dpi value for the plots.
+
+Next, the code prepares the datasets for usage. It reads the codon usage data from a CSV file and splits it into two dataframes: codons and species. It also performs some data manipulation and sets display options for pandas.
+
+##Visualize Codon for Species
+The code provides a function get_codon_graph that visualizes the codon distribution for a given species. It takes a species ID as input, retrieves the corresponding organism's codon data, and plots a pie chart to represent the codon usage. The function uses matplotlib for visualization.
+
+##Get Data from NCBI DB
+The code includes a function get_lineage that retrieves the lineage of a species from the NCBI taxonomy database. It takes a species ID as input, gets the corresponding organism's information, and uses the NCBITaxa library to retrieve the lineage information. The function prints the lineage indices and names of the species.
+
+##Compare Organisms
+The code provides a function compare that compares the codon usage between two organisms. It takes two species IDs as input, retrieves their codon data, calculates the similarity between their codon distributions, and generates a bar plot to visualize the differences in codon usage. The function returns the overall similarity between the two organisms.
+
+##Visualisation and Querying
+The code includes functionality for querying a SPARQL endpoint and retrieving data from a database. It allows the user to input the query parameters such as predicate, subject, and object for the query. The user can also specify options for counting and sorting the results. The code generates a SPARQL query string based on the user inputs and sends the query to the specified endpoint using the SPARQLWrapper library. The results are then printed.
+
